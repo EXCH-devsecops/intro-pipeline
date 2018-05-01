@@ -3,12 +3,12 @@ pipeline {
     label 'jdk8'
   }
   stages {
-    stage('Hello DevOps World!') {
+    stage('Say Hello') {
       steps {
         echo "Hello ${params.Name}!"
+        sh 'java -version'
         echo "${TEST_USER_USR}"
         echo "${TEST_USER_PSW}"
-        sh 'java -version'
       }
     }
   }
